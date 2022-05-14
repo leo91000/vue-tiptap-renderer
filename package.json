@@ -1,0 +1,75 @@
+{
+  "name": "@leo91000/vue-tiptap-renderer",
+  "keywords": [
+    "tiptap",
+    "json",
+    "vue",
+    "render",
+    "function"
+  ],
+  "license": "MIT",
+  "description": "Tiptap JSON content renderer for Vue 2/3",
+  "author": {
+    "name": "Léo Coletta",
+    "email": "contact@leo-coletta.fr",
+    "url": "https://leo-coletta.fr"
+  },
+  "sideEffects": false,
+  "repository": "github:leo91000/vue-tiptap-renderer",
+  "homepage": "https://github.com/leo91000/vue-tiptap-renderer#readme",
+  "bugs": "https://github.com/leo91000/vue-tiptap-renderer/issues",
+  "funding": "https://github.com/leo91000",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vitest",
+    "lint": "eslint --ext .ts .",
+    "prepack": "nr build",
+    "release": "nr test && standard-version && git push --follow-tags && nr publish",
+    "test": "nr lint && vitest run"
+  },
+  "version": "0.1.0",
+  "packageManager": "pnpm@7.1.0",
+  "volta": {
+    "node": "16.15.0",
+    "npm": "8.10.0"
+  },
+  "dependencies": {
+    "vue-demi": "*"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.23.1",
+    "@antfu/ni": "0.16.2",
+    "@vue/test-utils": "2.0.0-rc.21",
+    "eslint": "8.15.0",
+    "jsdom": "^19.0.0",
+    "standard-version": "9.3.2",
+    "typescript": "4.6.4",
+    "unbuild": "0.7.4",
+    "vitest": "0.12.6",
+    "vue": "3.2.33"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  }
+}

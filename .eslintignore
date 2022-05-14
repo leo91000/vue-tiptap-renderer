@@ -1,0 +1,7 @@
+dist
+node_modules
+.output
+.nuxt
+pnpm-lock.yaml
+renovate.json5
+.github
