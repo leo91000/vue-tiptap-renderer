@@ -67,17 +67,17 @@ const fontFamilyClasses = {
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/ufo?style=flat-square
-[npm-version-href]: https://npmjs.com/package/ufo
+[npm-version-src]: https://img.shields.io/npm/v/@leo91000/vue-tiptap-renderer?style=flat-square
+[npm-version-href]: https://www.npmjs.com/package/@leo91000/vue-tiptap-renderer
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/ufo?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/ufo
+[npm-downloads-src]: https://img.shields.io/npm/dm/@leo91000/vue-tiptap-renderer?style=flat-square
+[npm-downloads-href]: https://www.npmjs.com/package/@leo91000/vue-tiptap-renderer
 
-[github-actions-src]: https://img.shields.io/github/workflow/status/unjs/ufo/ci/main?style=flat-square
-[github-actions-href]: https://github.com/unjs/ufo/actions?query=workflow%3Aci
+[github-actions-src]: https://img.shields.io/github/workflow/status/leo91000/vue-tiptap-renderer/ci/main?style=flat-square
+[github-actions-href]: https://github.com/leo91000/vue-tiptap-renderer/actions?query=workflow%3Aci
 
 [codecov-src]: https://img.shields.io/codecov/c/gh/leo91000/vue-tiptap-renderer/main?style=flat-square
 [codecov-href]: https://codecov.io/gh/leo91000/vue-tiptap-renderer
 
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/ufo?style=flat-square
-[bundle-href]: https://bundlephobia.com/result?p=ufo
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/@leo91000/vue-tiptap-renderer?style=flat-square
+[bundle-href]: https://bundlephobia.com/result?p=@leo91000/vue-tiptap-renderer
