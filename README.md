@@ -76,8 +76,8 @@ const fontFamilyClasses = {
 [github-actions-src]: https://img.shields.io/github/workflow/status/unjs/ufo/ci/main?style=flat-square
 [github-actions-href]: https://github.com/unjs/ufo/actions?query=workflow%3Aci
 
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/ufo/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/unjs/ufo
+[codecov-src]: https://img.shields.io/codecov/c/gh/leo91000/vue-tiptap-renderer/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/leo91000/vue-tiptap-renderer
 
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/ufo?style=flat-square
 [bundle-href]: https://bundlephobia.com/result?p=ufo
