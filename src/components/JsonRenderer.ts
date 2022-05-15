@@ -2,7 +2,7 @@ import type { VNode } from 'vue-demi'
 import { Text, h } from 'vue-demi'
 import type { JSONContent } from '../types'
 
-const { keys, entries, assign } = Object
+const { keys, values, entries, assign } = Object
 
 function stylesFromAttrs(attrs?: JSONContent['attrs']) {
   if (!attrs)
@@ -42,17 +42,10 @@ function JsonRendererImpl(props: { content: JSONContent }): VNode | VNode[] | nu
   const style = stylesFromAttrs(props.content.attrs)
 
   if (props.content.marks) {
-    let currentStyle: Record<string, string>
     for (const mark of props.content.marks) {
       switch (mark.type) {
         case 'textStyle':
-          currentStyle = stylesFromAttrs(mark.attrs)
-
-          if (props.content.type === 'text' && keys(currentStyle).length !== 0)
-            render = h('span', { style: currentStyle }, props.content.text)
-          else
-            assign(style, currentStyle)
-
+          assign(style, stylesFromAttrs(mark.attrs))
           break
         case 'bold':
           render = h('strong', render || child || props.content.text)
@@ -106,10 +99,16 @@ function JsonRendererImpl(props: { content: JSONContent }): VNode | VNode[] | nu
         title: props.content.attrs.title,
       })
     case 'text':
-      if (render)
+      if (render) {
+        render.props = defaultProps
         return render
+      }
 
-      return h(Text, props.content.text)
+      if (values(defaultProps).every(value => value instanceof Object ? keys(value).length === 0 : !value))
+        return h(Text, props.content.text)
+
+      return h('span', defaultProps, props.content.text)
+
     default:
       console.warn({
         message: 'Unmanaged render',
