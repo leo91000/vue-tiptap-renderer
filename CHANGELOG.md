@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.1...v0.2.2) (2022-05-15)
+
+
+### Bug Fixes
+
+* Marks only rendering span ([a38b2cf](https://github.com/leo91000/vue-tiptap-renderer/commit/a38b2cfe8bdfdd422ab3fe72b610cea5b171d833))
+
 ### [0.2.1](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.0...v0.2.1) (2022-05-15)
 
 

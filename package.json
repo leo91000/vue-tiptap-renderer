@@ -39,7 +39,7 @@
     "release": "nr test && standard-version && git push --follow-tags && pnpm publish",
     "test": "nr lint && vitest run"
   },
-  "version": "0.2.1",
+  "version": "0.2.2",
   "packageManager": "pnpm@7.1.0",
   "volta": {
     "node": "16.15.0",
