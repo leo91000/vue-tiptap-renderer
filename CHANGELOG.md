@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.0...v0.2.1) (2022-05-15)
+
+
+### Bug Fixes
+
+* Import Text symbol from vue-demi instead of runtime core ([be94364](https://github.com/leo91000/vue-tiptap-renderer/commit/be9436478a520c5aff3efac0506363511f1486b9))
+
 ## [0.2.0](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.1.6...v0.2.0) (2022-05-15)
 
 
