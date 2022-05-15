@@ -1,5 +1,3 @@
-import { copyFile } from 'fs/promises'
-import { resolve } from 'path'
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
@@ -14,9 +12,4 @@ export default defineBuildConfig({
   externals: [
     'vue-demi',
   ],
-  hooks: {
-    'build:done': async () => {
-      await copyFile(resolve(__dirname, 'style.css'), resolve(__dirname, 'dist/style.css'))
-    },
-  },
 })

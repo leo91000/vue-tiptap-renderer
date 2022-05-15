@@ -1,94 +1,32 @@
-import type { InjectionKey, VNode } from 'vue-demi'
-import { h, inject } from 'vue-demi'
-import type { JSONContent, LinkAttrs } from '../types'
+import type { VNode } from 'vue-demi'
+import { h } from 'vue-demi'
+import { Text } from '@vue/runtime-core'
+import type { JSONContent } from '../types'
 
-const { keys } = Object
+const { keys, entries, assign } = Object
 
-const textAlignClasses = {
-  center: 'text-center',
-  justify: 'text-justify',
-  left: 'text-left',
-  right: 'text-right',
-}
-
-export type FontFamilyClasses = Record<string, string>
-
-function classesFromAttrs(attrs?: JSONContent['attrs'], fontFamilyClasses?: FontFamilyClasses) {
+function stylesFromAttrs(attrs?: JSONContent['attrs']) {
   if (!attrs)
-    return []
+    return {}
 
-  const classes = []
+  const style: Record<string, string> = {}
 
-  for (const key in attrs) {
+  for (const [key, value] of entries(attrs)) {
     switch (key) {
       case 'textAlign':
-        if (textAlignClasses[attrs.textAlign])
-          classes.push(textAlignClasses[attrs.textAlign])
+        style.textAlign = value
         break
       case 'fontFamily':
-        if (fontFamilyClasses?.[attrs.fontFamily])
-          classes.push(fontFamilyClasses[attrs.fontFamily])
-
+        if (value)
+          style.fontFamily = value
         break
     }
   }
 
-  return classes
+  return style
 }
 
-function classesFromMarks(marks?: JSONContent['marks'], fontFamilyClasses?: FontFamilyClasses) {
-  if (!marks)
-    return []
-
-  const classes = []
-
-  for (const mark of marks) {
-    switch (mark.type) {
-      case 'textStyle':
-        classes.push(...classesFromAttrs(mark.attrs, fontFamilyClasses))
-        break
-      case 'bold':
-        classes.push('font-bold')
-        break
-      case 'italic':
-        classes.push('italic')
-        break
-      case 'underline':
-        classes.push('underline')
-        break
-      case 'strike':
-        classes.push('line-through')
-        break
-      case 'link':
-        break
-      default:
-        console.warn({
-          message: 'Unmanaged mark',
-          args: { mark },
-        })
-    }
-  }
-
-  return classes
-}
-
-function findRootLinks(content: JSONContent) {
-  return content?.marks?.find(value => value.type === 'link')
-}
-
-function childWithText(text: string | VNode, child?: VNode[] | undefined, link?: LinkAttrs) {
-  let actualText = text
-  if (link)
-    actualText = h('a', { href: link.href, target: link.target }, text)
-
-  return child && child.length ? [actualText, ...child] : actualText
-}
-
-function text(content: JSONContent, child?: VNode[] | undefined) {
-  return childWithText(content.text, child, findRootLinks(content)?.attrs as LinkAttrs | undefined)
-}
-
-function JsonRendererImpl(props: { content: JSONContent; fontFamilyClasses?: FontFamilyClasses }): VNode | VNode[] | null {
+function JsonRendererImpl(props: { content: JSONContent }): VNode | VNode[] | null {
   // Render child if any
   const child = props.content
     .content?.map((c) => {
@@ -100,29 +38,65 @@ function JsonRendererImpl(props: { content: JSONContent; fontFamilyClasses?: Fon
     // Remove not rendered
     .filter((v): v is VNode => v !== null)
 
-  const classes = [...classesFromAttrs(props.content.attrs, props.fontFamilyClasses), ...classesFromMarks(props.content.marks)]
+  let render: VNode
 
-  const defaultProps = {
-    class: classes,
+  const style = stylesFromAttrs(props.content.attrs)
+
+  if (props.content.marks) {
+    let currentStyle: Record<string, string>
+    for (const mark of props.content.marks) {
+      switch (mark.type) {
+        case 'textStyle':
+          currentStyle = stylesFromAttrs(mark.attrs)
+
+          if (props.content.type === 'text' && keys(currentStyle).length !== 0)
+            render = h('span', { style: currentStyle }, props.content.text)
+          else
+            assign(style, currentStyle)
+
+          break
+        case 'bold':
+          render = h('strong', render || child || props.content.text)
+          break
+        case 'italic':
+          render = h('i', render || child || props.content.text)
+          break
+        case 'underline':
+          render = h('u', render || child || props.content.text)
+          break
+        case 'strike':
+          render = h('s', render || child || props.content.text)
+          break
+        case 'link':
+          render = h('a', { href: mark.attrs.href, target: mark.attrs.target }, render || child || props.content.text)
+          break
+        default:
+          console.warn({
+            message: 'Unmanaged mark',
+            args: { mark },
+          })
+      }
+    }
   }
+
+  const defaultProps = { style }
+  const renderedChild = render || child || props.content.text
 
   switch (props.content.type) {
     case 'doc':
       return child
     case 'heading':
-      return h(`h${props.content.attrs.level}`, defaultProps, child)
+      return h(`h${props.content.attrs.level}`, defaultProps, renderedChild)
     case 'blockquote':
-      return h('blockquote', defaultProps, child)
+      return h('blockquote', defaultProps, renderedChild)
     case 'bulletList':
-      return h('ul', defaultProps, child)
+      return h('ul', defaultProps, renderedChild)
     case 'orderedList':
-      return h('ol', defaultProps, child)
+      return h('ol', defaultProps, renderedChild)
     case 'listItem':
-      return h('li', defaultProps, child)
-    case 'text':
-      return h('span', defaultProps, text(props.content, child))
+      return h('li', defaultProps, renderedChild)
     case 'paragraph':
-      return h('p', defaultProps, text(props.content, child))
+      return h('p', defaultProps, renderedChild)
     case 'hardBreak':
       return h('br')
     case 'image':
@@ -132,6 +106,11 @@ function JsonRendererImpl(props: { content: JSONContent; fontFamilyClasses?: Fon
         alt: props.content.attrs.alt,
         title: props.content.attrs.title,
       })
+    case 'text':
+      if (render)
+        return render
+
+      return h(Text, props.content.text)
     default:
       console.warn({
         message: 'Unmanaged render',
@@ -143,26 +122,11 @@ function JsonRendererImpl(props: { content: JSONContent; fontFamilyClasses?: Fon
   }
 }
 
-export const FontFamilyClassesKey: InjectionKey<FontFamilyClasses> = Symbol('VueTiptapRendererFontFamilyClasses')
+export function JsonRenderer(props: { content: JSONContent }): VNode | VNode[] {
+  if (!props.content)
+    return h('p', {}, 'Cannot render empty article')
 
-export function JsonRenderer({ content, fontFamilyClasses = inject(FontFamilyClassesKey, undefined) }: { content: JSONContent; fontFamilyClasses?: FontFamilyClasses }): VNode | VNode[] {
-  if (!content)
-    return h('p', {}, 'Cannot render article')
-
-  // Automatically quote the font families
-  if (fontFamilyClasses) {
-    for (const key of keys(fontFamilyClasses)) {
-      const escaped = key
-        .replaceAll(/(^['"]+)|(['"]+$)/g, '')
-        .replaceAll('\'', '\\\'')
-        .replaceAll('"', '\\"')
-
-      fontFamilyClasses[`'${escaped}'`] = fontFamilyClasses[key]
-      fontFamilyClasses[`"${escaped}"`] = fontFamilyClasses[key]
-    }
-  }
-
-  const result = JsonRendererImpl({ content, fontFamilyClasses })
+  const result = JsonRendererImpl(props)
 
   if (result === null) {
     console.error({

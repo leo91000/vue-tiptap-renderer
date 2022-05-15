@@ -11,8 +11,3 @@ export interface JSONContent {
 
   [key: string]: any
 }
-
-export interface LinkAttrs {
-  href: string
-  target?: string
-}

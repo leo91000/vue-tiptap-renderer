@@ -41,27 +41,17 @@ pnpm add @leo91000/vue-tiptap-renderer
 
 ```vue
 <script setup lang="ts">
-// Optional : Import CSS Classes or provide your own
-// You can also whitelist those tailwind css classes : italic line-through underline font-bold text-center text-justify text-left text-right font-bold
-import '@leo91000/vue-tiptap-renderer/styles.css'
-
 import type { JSONContent } from '@leo91000/vue-tiptap-renderer'
 import { JsonRenderer } from '@leo91000/vue-tiptap-renderer'
 
 defineProps<{
   article: JSONContent
 }>()
-
-// Inject css class for font family text style
-const fontFamilyClasses = {
-  'Roboto': 'font-roboto'
-}
 </script>
 
 <template>
   <JsonRenderer
     :content="article" 
-    :font-family-classes="fontFamilyClasses" 
   />
 </template>
 ```
