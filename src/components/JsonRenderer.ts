@@ -1,6 +1,5 @@
 import type { VNode } from 'vue-demi'
-import { h } from 'vue-demi'
-import { Text } from '@vue/runtime-core'
+import { Text, h } from 'vue-demi'
 import type { JSONContent } from '../types'
 
 const { keys, entries, assign } = Object
