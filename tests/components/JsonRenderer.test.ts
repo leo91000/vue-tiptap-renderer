@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
-import type { FontFamilyClasses } from '../../src'
+import type { FontFamilyClasses, JSONContent } from '../../src'
 import { JsonRenderer } from '../../src'
-import type { JSONContent } from '../../dist'
 
 const WrappedJsonRenderer = defineComponent({
   components: {
@@ -28,12 +27,12 @@ describe('JsonRenderer', () => {
       props: {
         content: {
           type: 'doc',
-          content: [{ type: 'text', text: 'ARTICLE_RENDERED_SUCCESFULLY' }],
+          content: [{ type: 'text', text: 'ARTICLE_RENDERED_SUCCESSFULLY' }],
         },
       },
     })
 
-    expect(wrapper.html()).toContain('ARTICLE_RENDERED_SUCCESFULLY')
+    expect(wrapper.html()).toContain('ARTICLE_RENDERED_SUCCESSFULLY')
   })
 
   it('should render complex articles', () => {

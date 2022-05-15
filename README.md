@@ -66,6 +66,12 @@ const fontFamilyClasses = {
 </template>
 ```
 
+## Utils
+
+This library also features utility functions :
+- `getContentFirstImage`: Return the first image found in the JSON or null
+- `getContentWordCount`: Return the total word count of the JSON content
+
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@leo91000/vue-tiptap-renderer?style=flat-square
 [npm-version-href]: https://www.npmjs.com/package/@leo91000/vue-tiptap-renderer
