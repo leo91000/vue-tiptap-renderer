@@ -40,7 +40,7 @@
     "test": "nr lint && vitest run"
   },
   "version": "0.2.2",
-  "packageManager": "pnpm@7.1.0",
+  "packageManager": "pnpm@7.1.1",
   "volta": {
     "node": "16.15.0",
     "npm": "8.10.0"
