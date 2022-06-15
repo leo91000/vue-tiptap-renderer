@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': 0.25.1
   '@antfu/ni': 0.16.2
-  '@vue/test-utils': 2.0.0
+  '@vue/test-utils': 2.0.1
   c8: 7.11.3
   eslint: 8.17.0
   jsdom: ^19.0.0
@@ -20,7 +20,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.25.1_ud6rd4xtew5bv4yhvkvu24pzm4
   '@antfu/ni': 0.16.2
-  '@vue/test-utils': 2.0.0_vue@3.2.37
+  '@vue/test-utils': 2.0.1_vue@3.2.37
   c8: 7.11.3
   eslint: 8.17.0
   jsdom: 19.0.0
@@ -782,8 +782,8 @@ packages:
   /@vue/shared/3.2.37:
     resolution: {integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==}
 
-  /@vue/test-utils/2.0.0_vue@3.2.37:
-    resolution: {integrity: sha512-zL5kygNq7hONrO1CzaUGprEAklAX+pH8J1MPMCU3Rd2xtSYkZ+PmKU3oEDRg8VAGdL5lNJHzDgrud5amFPtirw==}
+  /@vue/test-utils/2.0.1_vue@3.2.37:
+    resolution: {integrity: sha512-4kt7Sw1gzXeQOsMqrwrQbmEiG8El4MP8P4hfxkmfXdUHf7yHa3xC5CQc0x2YyuhT41w2d4K4O0ZdRvZhGdZlow==}
     peerDependencies:
       vue: ^3.0.1
     dependencies:
