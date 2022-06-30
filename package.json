@@ -43,7 +43,7 @@
   "packageManager": "pnpm@7.4.0",
   "volta": {
     "node": "16.15.1",
-    "npm": "8.13.1"
+    "npm": "8.13.2"
   },
   "dependencies": {
     "vue-demi": "*"
