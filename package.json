@@ -42,7 +42,7 @@
   "version": "0.2.2",
   "packageManager": "pnpm@7.4.0",
   "volta": {
-    "node": "16.15.1",
+    "node": "16.15.0",
     "npm": "8.13.2"
   },
   "dependencies": {
