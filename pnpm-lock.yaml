@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': 0.25.2
-  '@antfu/ni': 0.17.1
+  '@antfu/ni': 0.17.2
   '@vue/test-utils': 2.0.2
   c8: 7.11.3
   eslint: 8.19.0
@@ -19,7 +19,7 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 0.25.2_4x5o4skxv6sl53vpwefgt23khm
-  '@antfu/ni': 0.17.1
+  '@antfu/ni': 0.17.2
   '@vue/test-utils': 2.0.2_vue@3.2.37
   c8: 7.11.3
   eslint: 8.19.0
@@ -141,8 +141,8 @@ packages:
       - typescript
     dev: true
 
-  /@antfu/ni/0.17.1:
-    resolution: {integrity: sha512-aUo9t4lJDd+AQkBceohQdCkoLqNQhIUNHXk7B5oZuCO0os3FOZE8PLVp/nUz7uTnV0+0xMhK/wDl4AGG1ZuU3Q==}
+  /@antfu/ni/0.17.2:
+    resolution: {integrity: sha512-uYsmcsQzylpMiRB4gJRwcEJMIrKyeHZO0CJct8MmqkT3B7HTFU6oSZhDB50E/XvQw7FW8oT/tKsq3NFplRgG2Q==}
     hasBin: true
     dev: true
 
