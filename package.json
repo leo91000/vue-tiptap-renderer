@@ -40,10 +40,10 @@
     "test": "nr lint && vitest run"
   },
   "version": "0.2.2",
-  "packageManager": "pnpm@7.5.2",
+  "packageManager": "pnpm@7.6.0",
   "volta": {
     "node": "16.16.0",
-    "npm": "8.15.0"
+    "npm": "8.15.1"
   },
   "dependencies": {
     "vue-demi": "*"
@@ -58,7 +58,7 @@
     "standard-version": "9.5.0",
     "typescript": "4.7.4",
     "unbuild": "0.7.6",
-    "vitest": "0.18.1",
+    "vitest": "0.19.1",
     "vue": "3.2.37"
   },
   "peerDependencies": {
