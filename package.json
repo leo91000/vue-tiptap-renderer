@@ -40,7 +40,7 @@
     "test": "nr lint && vitest run"
   },
   "version": "0.2.2",
-  "packageManager": "pnpm@7.6.0",
+  "packageManager": "pnpm@7.8.0",
   "volta": {
     "node": "16.16.0",
     "npm": "8.15.1"
@@ -53,12 +53,12 @@
     "@antfu/ni": "0.17.2",
     "@vue/test-utils": "2.0.2",
     "c8": "7.12.0",
-    "eslint": "8.20.0",
+    "eslint": "8.21.0",
     "jsdom": "^20.0.0",
     "standard-version": "9.5.0",
     "typescript": "4.7.4",
     "unbuild": "0.7.6",
-    "vitest": "0.19.1",
+    "vitest": "0.20.2",
     "vue": "3.2.37"
   },
   "peerDependencies": {
