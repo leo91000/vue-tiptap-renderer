@@ -49,7 +49,7 @@
     "vue-demi": "*"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.25.2",
+    "@antfu/eslint-config": "0.26.0",
     "@antfu/ni": "0.17.2",
     "@vue/test-utils": "2.0.2",
     "c8": "7.12.0",
