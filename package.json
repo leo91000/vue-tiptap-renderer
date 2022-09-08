@@ -59,7 +59,7 @@
     "typescript": "4.8.2",
     "unbuild": "0.8.10",
     "vitest": "0.23.1",
-    "vue": "3.2.38"
+    "vue": "3.2.39"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
