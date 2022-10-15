@@ -10,7 +10,7 @@ specifiers:
   jsdom: ^20.0.1
   standard-version: 9.5.0
   typescript: 4.8.4
-  unbuild: 0.9.1
+  unbuild: 0.9.2
   vitest: 0.24.3
   vue: 3.2.41
   vue-demi: '*'
@@ -28,7 +28,7 @@ devDependencies:
   jsdom: 20.0.1
   standard-version: 9.5.0
   typescript: 4.8.4
-  unbuild: 0.9.1
+  unbuild: 0.9.2
   vitest: 0.24.3_jsdom@20.0.1
   vue: 3.2.41
 
@@ -743,6 +743,20 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.39.0
       eslint-visitor-keys: 3.3.0
+    dev: true
+
+  /@unjsio/rollup-plugin-dts/5.0.0-rc.1_iveik5itt6bizfkphibyk5djdy:
+    resolution: {integrity: sha512-ygcyY5+1PfKjxO6mNlfFWrA1hv9GaMIJMppL+zKqp1zRsDag9jmf7D3isnRWiiE0DSlBHjGGCiKFZ5c5XcWzTA==}
+    engines: {node: '>=v14'}
+    peerDependencies:
+      rollup: ^3.0.0
+      typescript: ^4.1
+    dependencies:
+      magic-string: 0.26.7
+      rollup: 3.1.0
+      typescript: 4.8.4
+    optionalDependencies:
+      '@babel/code-frame': 7.18.6
     dev: true
 
   /@vitest/coverage-c8/0.24.3_jsdom@20.0.1:
@@ -1645,10 +1659,6 @@ packages:
       string.prototype.trimend: 1.0.5
       string.prototype.trimstart: 1.0.5
       unbox-primitive: 1.0.2
-    dev: true
-
-  /es-module-lexer/0.9.3:
-    resolution: {integrity: sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==}
     dev: true
 
   /es-shim-unscopables/1.0.0:
@@ -3134,11 +3144,6 @@ packages:
     hasBin: true
     dev: true
 
-  /joycon/3.1.1:
-    resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
-    engines: {node: '>=10'}
-    dev: true
-
   /js-sdsl/4.1.5:
     resolution: {integrity: sha512-08bOAKweV2NUC1wqTtf3qZlnpOX/R2DU9ikpjOHs0H+ibQv3zpncVQg6um4uYtRtrwIX8M4Nh3ytK4HGlYAq7Q==}
     dev: true
@@ -4004,38 +4009,6 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup-plugin-dts/4.2.3_iveik5itt6bizfkphibyk5djdy:
-    resolution: {integrity: sha512-jlcpItqM2efqfIiKzDB/IKOS9E9fDvbkJSGw5GtK/PqPGS9eC3R3JKyw2VvpTktZA+TNgJRMu1NTv244aTUzzQ==}
-    engines: {node: '>=v12.22.12'}
-    peerDependencies:
-      rollup: ^2.55
-      typescript: ^4.1
-    dependencies:
-      magic-string: 0.26.7
-      rollup: 3.1.0
-      typescript: 4.8.4
-    optionalDependencies:
-      '@babel/code-frame': 7.18.6
-    dev: true
-
-  /rollup-plugin-esbuild/4.10.1_fclsl4c6gsr6cofi4hyljdq5fe:
-    resolution: {integrity: sha512-/ymcRB283zjFp1JTBXO8ekxv0c9vRc2L6OTljghsLthQ4vqeDSDWa9BVz1tHiVrx6SbUnUpDPLC0K/MXK7j5TA==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      esbuild: '>=0.10.1'
-      rollup: ^1.20.0 || ^2.0.0
-    dependencies:
-      '@rollup/pluginutils': 4.2.1
-      debug: 4.3.4
-      es-module-lexer: 0.9.3
-      esbuild: 0.15.10
-      joycon: 3.1.1
-      jsonc-parser: 3.2.0
-      rollup: 3.1.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /rollup/2.78.1:
     resolution: {integrity: sha512-VeeCgtGi4P+o9hIg+xz4qQpRl6R401LWEXBmxYKOV4zlF82lyhgh2hTZnheFUbANE8l2A41F458iwj2vEYaXJg==}
     engines: {node: '>=10.0.0'}
@@ -4482,8 +4455,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /unbuild/0.9.1:
-    resolution: {integrity: sha512-R2+wGZEx3cqgKNUgIXNq5lnow8vdZY70nK8CaDd1txw0cNMBiu76WvQUEICI8Cw/GhwxMi5Ek7JhwttENG2/Wg==}
+  /unbuild/0.9.2:
+    resolution: {integrity: sha512-DQeN06/+V7JIOC3i0sTDYB6spRsTLuE0tdld2y0tXMvbzIEl+oEGL6JaIjVcjQ3CF9j2CqfVvLAXiPe2ZoZePA==}
     hasBin: true
     dependencies:
       '@rollup/plugin-alias': 4.0.0_rollup@3.1.0
@@ -4492,6 +4465,7 @@ packages:
       '@rollup/plugin-node-resolve': 15.0.0_rollup@3.1.0
       '@rollup/plugin-replace': 5.0.0_rollup@3.1.0
       '@rollup/pluginutils': 5.0.1_rollup@3.1.0
+      '@unjsio/rollup-plugin-dts': 5.0.0-rc.1_iveik5itt6bizfkphibyk5djdy
       chalk: 5.1.2
       consola: 2.15.3
       defu: 6.1.0
@@ -4509,8 +4483,6 @@ packages:
       pretty-bytes: 6.0.0
       rimraf: 3.0.2
       rollup: 3.1.0
-      rollup-plugin-dts: 4.2.3_iveik5itt6bizfkphibyk5djdy
-      rollup-plugin-esbuild: 4.10.1_fclsl4c6gsr6cofi4hyljdq5fe
       scule: 0.3.2
       typescript: 4.8.4
       untyped: 0.5.0
