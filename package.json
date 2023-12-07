@@ -46,8 +46,8 @@
     "test": "nr lint && nr typecheck && vitest run"
   },
   "volta": {
-    "node": "18.12.1",
-    "npm": "9.2.0"
+    "node": "18.19.0",
+    "npm": "9.9.2"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
