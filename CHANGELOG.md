@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.2...v0.2.3) (2023-12-07)
+
+
+### Features
+
+* Add extractContentText util and upgrade deps ([a7bfbcd](https://github.com/leo91000/vue-tiptap-renderer/commit/a7bfbcd6061ca62778f778cfdfbc4213ba6feb49))
+
 ### [0.2.2](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.1...v0.2.2) (2022-05-15)
 
 
