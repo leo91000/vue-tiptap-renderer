@@ -1,1 +1,1 @@
-export { JSONContent } from '@tiptap/core'
+export type { JSONContent } from '@tiptap/core'
