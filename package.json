@@ -1,7 +1,7 @@
 {
   "name": "@leo91000/vue-tiptap-renderer",
   "type": "module",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "packageManager": "pnpm@8.11.0",
   "description": "Tiptap JSON content renderer for Vue 2/3",
   "author": {
