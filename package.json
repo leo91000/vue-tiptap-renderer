@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "@tiptap/core": "^2.1.13",
+    "@tiptap/pm": "^2.1.13",
     "vue-demi": "^0.14.6"
   },
   "devDependencies": {
