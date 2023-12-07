@@ -1,5 +1,19 @@
 {
   "name": "@leo91000/vue-tiptap-renderer",
+  "type": "module",
+  "version": "0.2.2",
+  "packageManager": "pnpm@8.11.0",
+  "description": "Tiptap JSON content renderer for Vue 2/3",
+  "author": {
+    "name": "Léo Coletta",
+    "email": "contact@leo-coletta.fr",
+    "url": "https://leo-coletta.fr"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/leo91000",
+  "homepage": "https://github.com/leo91000/vue-tiptap-renderer#readme",
+  "repository": "github:leo91000/vue-tiptap-renderer",
+  "bugs": "https://github.com/leo91000/vue-tiptap-renderer/issues",
   "keywords": [
     "tiptap",
     "json",
@@ -7,59 +21,32 @@
     "render",
     "function"
   ],
-  "license": "MIT",
-  "description": "Tiptap JSON content renderer for Vue 2/3",
-  "author": {
-    "name": "Léo Coletta",
-    "email": "contact@leo-coletta.fr",
-    "url": "https://leo-coletta.fr"
-  },
   "sideEffects": false,
-  "repository": "github:leo91000/vue-tiptap-renderer",
-  "homepage": "https://github.com/leo91000/vue-tiptap-renderer#readme",
-  "bugs": "https://github.com/leo91000/vue-tiptap-renderer/issues",
-  "funding": "https://github.com/leo91000",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "unbuild",
     "dev": "vitest",
-    "lint": "eslint --ext .ts .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
     "prepack": "nr build",
     "release": "nr test && standard-version && git push --follow-tags && pnpm publish",
-    "test": "nr lint && vitest run"
+    "test": "nr lint && nr typecheck && vitest run"
   },
-  "version": "0.2.2",
-  "packageManager": "pnpm@8.1.0",
   "volta": {
     "node": "18.12.1",
     "npm": "9.2.0"
-  },
-  "dependencies": {
-    "vue-demi": "*"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "0.33.1",
-    "@antfu/ni": "0.18.8",
-    "@vue/test-utils": "2.2.6",
-    "@vitest/coverage-c8": "0.25.7",
-    "eslint": "8.29.0",
-    "jsdom": "^21.0.0",
-    "standard-version": "9.5.0",
-    "typescript": "5.0.2",
-    "unbuild": "1.0.2",
-    "vitest": "0.25.7",
-    "vue": "3.2.45"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
@@ -68,9 +55,24 @@
   "peerDependenciesMeta": {
     "@vue/composition-api": {
       "optional": true
-    },
-    "vue": {
-      "optional": true
     }
+  },
+  "dependencies": {
+    "@tiptap/core": "^2.1.13",
+    "vue-demi": "^0.14.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.4.2",
+    "@antfu/ni": "^0.21.12",
+    "@vitest/coverage-v8": "^1.0.2",
+    "@vue/test-utils": "^2.4.3",
+    "eslint": "^8.55.0",
+    "jsdom": "^23.0.1",
+    "rollup": "^4.6.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.3.3",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.0.2",
+    "vue": "^3.3.10"
   }
 }

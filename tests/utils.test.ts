@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { getContentFirstImage, getContentWordCount } from '../src'
+import { extractContentText, getContentFirstImage, getContentWordCount } from '../src'
 
 describe('utils', () => {
   describe('getContentFirstImage', () => {
@@ -43,7 +43,7 @@ describe('utils', () => {
       })
     })
 
-    it ('should return the first image if multiple image are present', () => {
+    it('should return the first image if multiple image are present', () => {
       expect(
         getContentFirstImage({
           type: 'doc',
@@ -113,6 +113,48 @@ describe('utils', () => {
           ],
         }),
       ).toEqual(9)
+    })
+  })
+
+  describe('extractContentText', () => {
+    it('should return an empty string if there is not any text', () => {
+      expect(
+        extractContentText({
+          type: 'doc',
+          content: [
+            {
+              type: 'image',
+              attrs: {
+                src: 'https://domain.com/my-image.jpg',
+                alt: 'A sample image for my sample article',
+                title: 'A sample title',
+              },
+            },
+          ],
+        }),
+      ).toEqual('')
+    })
+
+    it('should return the text', () => {
+      expect(
+        extractContentText({
+          type: 'doc',
+          content: [
+            {
+              type: 'heading',
+              content: [
+                { type: 'text', text: 'My Title is cool' },
+              ],
+            },
+            {
+              type: 'paragraph',
+              content: [
+                { type: 'text', text: 'My Paragraph is also cool' },
+              ],
+            },
+          ],
+        }),
+      ).toEqual('My Title is cool\nMy Paragraph is also cool\n')
     })
   })
 })

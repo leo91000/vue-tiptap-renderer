@@ -1,4 +1,3 @@
-
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Github Actions][github-actions-src]][github-actions-href]
@@ -51,7 +50,7 @@ defineProps<{
 
 <template>
   <JsonRenderer
-    :content="article" 
+    :content="article"
   />
 </template>
 ```

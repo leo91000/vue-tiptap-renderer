@@ -17,7 +17,7 @@ const WrappedJsonRenderer = defineComponent({
   template: '<JsonRenderer v-bind="$props" />',
 })
 
-describe('JsonRenderer', () => {
+describe('jsonRenderer', () => {
   it('should render text', () => {
     const wrapper = mount(WrappedJsonRenderer, {
       props: {

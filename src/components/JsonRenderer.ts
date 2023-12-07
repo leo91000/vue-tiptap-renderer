@@ -135,4 +135,3 @@ export function JsonRenderer(props: { content: JSONContent }): VNode | VNode[] {
 
   return result
 }
-
