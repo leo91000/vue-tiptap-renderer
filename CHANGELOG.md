@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.5...v0.2.6) (2023-12-07)
+
+
+### Bug Fixes
+
+* Use export type instead of raw export ([a18656a](https://github.com/leo91000/vue-tiptap-renderer/commit/a18656aa4bfbc0edd7878e2e771b043ea80279d5))
+
 ### [0.2.5](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.4...v0.2.5) (2023-12-07)
 
 ### [0.2.4](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.3...v0.2.4) (2023-12-07)
