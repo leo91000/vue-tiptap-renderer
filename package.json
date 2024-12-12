@@ -47,7 +47,7 @@
   },
   "volta": {
     "node": "18.19.0",
-    "npm": "9.9.2"
+    "npm": "10.9.2"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
