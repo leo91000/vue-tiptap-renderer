@@ -2,7 +2,7 @@
   "name": "@leo91000/vue-tiptap-renderer",
   "type": "module",
   "version": "0.2.6",
-  "packageManager": "pnpm@8.11.0",
+  "packageManager": "pnpm@8.15.9",
   "description": "Tiptap JSON content renderer for Vue 2/3",
   "author": {
     "name": "Léo Coletta",
@@ -46,8 +46,8 @@
     "test": "nr lint && nr typecheck && vitest run"
   },
   "volta": {
-    "node": "18.19.0",
-    "npm": "9.9.2"
+    "node": "18.20.5",
+    "npm": "9.9.4"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
@@ -59,22 +59,22 @@
     }
   },
   "dependencies": {
-    "@tiptap/core": "^2.1.13",
-    "@tiptap/pm": "^2.1.13",
-    "vue-demi": "^0.14.6"
+    "@tiptap/core": "^2.10.4",
+    "@tiptap/pm": "^2.10.4",
+    "vue-demi": "^0.14.10"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.4.2",
-    "@antfu/ni": "^0.21.12",
-    "@vitest/coverage-v8": "^1.0.2",
-    "@vue/test-utils": "^2.4.3",
-    "eslint": "^8.55.0",
-    "jsdom": "^23.0.1",
-    "rollup": "^4.6.1",
+    "@antfu/eslint-config": "^2.27.3",
+    "@antfu/ni": "^0.23.2",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^8.57.1",
+    "jsdom": "^23.2.0",
+    "rollup": "^4.29.1",
     "standard-version": "^9.5.0",
-    "typescript": "^5.3.3",
+    "typescript": "^5.7.2",
     "unbuild": "^2.0.0",
-    "vitest": "^1.0.2",
-    "vue": "^3.3.10"
+    "vitest": "^1.6.0",
+    "vue": "^3.5.13"
   }
 }
