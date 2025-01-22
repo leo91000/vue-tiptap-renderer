@@ -46,7 +46,7 @@
     "test": "nr lint && nr typecheck && vitest run"
   },
   "volta": {
-    "node": "18.20.5",
+    "node": "18.20.6",
     "npm": "9.9.4"
   },
   "peerDependencies": {
@@ -59,8 +59,8 @@
     }
   },
   "dependencies": {
-    "@tiptap/core": "^2.10.4",
-    "@tiptap/pm": "^2.10.4",
+    "@tiptap/core": "^2.11.3",
+    "@tiptap/pm": "^2.11.3",
     "vue-demi": "^0.14.10"
   },
   "devDependencies": {
@@ -70,9 +70,9 @@
     "@vue/test-utils": "^2.4.6",
     "eslint": "^8.57.1",
     "jsdom": "^23.2.0",
-    "rollup": "^4.29.1",
+    "rollup": "^4.31.0",
     "standard-version": "^9.5.0",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "unbuild": "^2.0.0",
     "vitest": "^1.6.0",
     "vue": "^3.5.13"
