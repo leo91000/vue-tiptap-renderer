@@ -46,7 +46,7 @@
     "test": "nr lint && nr typecheck && vitest run"
   },
   "volta": {
-    "node": "18.20.6",
+    "node": "18.20.7",
     "npm": "9.9.4"
   },
   "peerDependencies": {
@@ -66,15 +66,15 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
     "@antfu/ni": "^0.23.2",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "^1.6.1",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^8.57.1",
     "jsdom": "^23.2.0",
-    "rollup": "^4.34.0",
+    "rollup": "^4.37.0",
     "standard-version": "^9.5.0",
-    "typescript": "^5.7.3",
+    "typescript": "^5.8.2",
     "unbuild": "^2.0.0",
-    "vitest": "^1.6.0",
+    "vitest": "^1.6.1",
     "vue": "^3.5.13"
   }
 }
