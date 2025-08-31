@@ -64,7 +64,7 @@
     "vue-demi": "^0.14.10"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.27.3",
+    "@antfu/eslint-config": "^5.2.1",
     "@antfu/ni": "^0.23.2",
     "@vitest/coverage-v8": "^1.6.1",
     "@vue/test-utils": "^2.4.6",
