@@ -15,6 +15,14 @@ function stylesFromAttrs(attrs?: JSONContent['attrs']) {
       case 'textAlign':
         style.textAlign = value
         break
+      case 'color':
+        if (value)
+          style.color = value
+        break
+      case 'backgroundColor':
+        if (value)
+          style.backgroundColor = value
+        break
       case 'fontFamily':
         if (value)
           style.fontFamily = value
