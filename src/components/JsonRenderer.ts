@@ -1,6 +1,6 @@
 import type { VNode } from 'vue-demi'
-import { Text, h } from 'vue-demi'
 import type { JSONContent } from '../types'
+import { h, Text } from 'vue-demi'
 
 const { keys, values, entries, assign } = Object
 
@@ -36,7 +36,8 @@ function stylesFromAttrs(attrs?: JSONContent['attrs']) {
 function JsonRendererImpl(props: { content: JSONContent }): VNode | VNode[] | null {
   // Render child if any
   const child = props.content
-    .content?.map((c) => {
+    .content
+    ?.map((c) => {
       const result = JsonRendererImpl({ content: c })
       return Array.isArray(result) ? result : [result]
     })

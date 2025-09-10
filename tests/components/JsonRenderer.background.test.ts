@@ -1,7 +1,7 @@
-import { describe, expect, it } from 'vitest'
-import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
 import type { JSONContent } from '../../src'
+import { mount } from '@vue/test-utils'
+import { describe, expect, it } from 'vitest'
+import { defineComponent } from 'vue'
 import { JsonRenderer } from '../../src'
 
 const WrappedJsonRenderer = defineComponent({
