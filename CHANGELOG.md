@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.6...v0.2.7) (2025-09-10)
+
+
+### Features
+
+* **renderer:** support textStyle color and backgroundColor\n\n- Map attrs.color and attrs.backgroundColor to inline styles\n- Add tests for color and background color rendering\n\nCloses # if applicable ([80d09bc](https://github.com/leo91000/vue-tiptap-renderer/commit/80d09bc9e1ea96c7fd4872934e8948530d8d7832))
+
 ### [0.2.6](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.5...v0.2.6) (2023-12-07)
 
 
