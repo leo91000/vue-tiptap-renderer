@@ -2,7 +2,7 @@
   "name": "@leo91000/vue-tiptap-renderer",
   "type": "module",
   "version": "0.2.7",
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.34.3",
   "description": "Tiptap JSON content renderer for Vue 2/3",
   "author": {
     "name": "Léo Coletta",
@@ -59,22 +59,22 @@
     }
   },
   "dependencies": {
-    "@tiptap/core": "^3.22.4",
-    "@tiptap/pm": "^3.22.4",
+    "@tiptap/core": "^3.26.1",
+    "@tiptap/pm": "^3.26.1",
     "vue-demi": "^0.14.10"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.4.1",
     "@antfu/ni": "^25.0.0",
-    "@vitest/coverage-v8": "^3.2.4",
-    "@vue/test-utils": "^2.4.6",
+    "@vitest/coverage-v8": "^3.2.6",
+    "@vue/test-utils": "^2.4.11",
     "eslint": "^9.39.4",
     "jsdom": "^26.1.0",
-    "rollup": "^4.60.2",
+    "rollup": "^4.62.0",
     "standard-version": "^9.5.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vitest": "^3.2.4",
-    "vue": "^3.5.32"
+    "vitest": "^3.2.6",
+    "vue": "^3.5.38"
   }
 }
