@@ -1,3 +1,9 @@
+minimumReleaseAgeExcludePrune: true
+trustPolicy: no-downgrade
+autoInstallPeers: false
+strictPeerDependencies: true
+shellEmulator: true
+
 onlyBuiltDependencies:
   - esbuild
   - vue-demi

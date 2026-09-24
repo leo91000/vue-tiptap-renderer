@@ -69,7 +69,11 @@ function JsonRendererImpl(props: { content: JSONContent }): VNode | VNode[] | nu
           render = h('s', render || child || props.content.text)
           break
         case 'link':
-          render = h('a', { href: mark.attrs.href, target: mark.attrs.target }, render || child || props.content.text)
+          render = h('a', {
+            href: mark.attrs.href,
+            target: mark.attrs.target,
+            rel: mark.attrs.rel || 'noopener noreferrer',
+          }, render || child || props.content.text)
           break
         default:
           console.warn({
@@ -109,7 +113,7 @@ function JsonRendererImpl(props: { content: JSONContent }): VNode | VNode[] | nu
       })
     case 'text':
       if (render) {
-        render.props = defaultProps
+        render.props = { ...render.props, ...defaultProps }
         return render
       }
 

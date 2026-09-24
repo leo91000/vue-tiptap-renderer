@@ -1,13 +1,28 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project are documented in this file.
+
+### [0.2.8](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.7...v0.2.8) (2026-09-24)
+
+### Bug Fixes
+
+- Preserve link attributes when applying text styles or rendering nested marks (upstream the patch used by Eliah).
+- Preserve explicit link `rel` values and default missing/empty values to `noopener noreferrer`.
+
+### Maintenance
+
+- Add regression tests for links and ESM/CommonJS server-rendering smoke tests.
+- Update Tiptap, Vue, Vitest, Vite, ESLint and jsdom; retain TypeScript 5.9 for build-tool compatibility.
+- Standardize development on Node 24 and test Node 22/24 in CI with a frozen lockfile.
+- Replace the local release script with checked tag releases using npm trusted publishing and provenance.
+- Remove unused release tooling and stale configuration, include the MIT license, and document all exports and release steps.
 
 ### [0.2.7](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.6...v0.2.7) (2025-09-10)
 
 
 ### Features
 
-* **renderer:** support textStyle color and backgroundColor\n\n- Map attrs.color and attrs.backgroundColor to inline styles\n- Add tests for color and background color rendering\n\nCloses # if applicable ([80d09bc](https://github.com/leo91000/vue-tiptap-renderer/commit/80d09bc9e1ea96c7fd4872934e8948530d8d7832))
+* **renderer:** support textStyle color and backgroundColor ([80d09bc](https://github.com/leo91000/vue-tiptap-renderer/commit/80d09bc9e1ea96c7fd4872934e8948530d8d7832))
 
 ### [0.2.6](https://github.com/leo91000/vue-tiptap-renderer/compare/v0.2.5...v0.2.6) (2023-12-07)
 
