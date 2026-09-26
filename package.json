@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.5.1",
-    "@types/node": "^24.13.6",
+    "@types/node": "^26.6.2",
     "@vitest/coverage-v8": "^5.0.1",
     "@vue/server-renderer": "^3.5.43",
     "@vue/test-utils": "^2.5.1",
